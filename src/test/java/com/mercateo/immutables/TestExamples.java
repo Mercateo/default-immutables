@@ -38,6 +38,6 @@ public class TestExamples {
         final ExampleTypedString typedString = ExampleTypedString.of("foo");
 
         assertThat(typedString.value()).isEqualTo("foo");
-        assertThat(typedString.toString()).isEqualTo("ExampleTypedString(foo)");
+        assertThat(typedString.toString()).isEqualTo("ExampleTypedString{foo}");
     }
 }
