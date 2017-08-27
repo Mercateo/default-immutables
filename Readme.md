@@ -1,4 +1,9 @@
-# default-immutables
+[![Build Status](https://travis-ci.org/Mercateo/default-immutables.svg?branch=master)](https://travis-ci.org/Mercateo/default-immutables)
+[![Coverage Status](https://coveralls.io/repos/github/Mercateo/default-immutables/badge.svg?branch=master)](https://coveralls.io/github/Mercateo/default-immutables?branch=master)
+[![MavenCentral](https://img.shields.io/maven-central/v/com.mercateo/default-immutables.svg)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.mercateo%22%20AND%20a%3A%22default-immutables%22)
+
+
+# com.mercateo:default-immutables
 
 Default-Styles and Helper-Classes for common use cases of [Immutables](http://immutables.github.io/), a framework based on annotation processors to generate simple, safe and consistent value objects
 
