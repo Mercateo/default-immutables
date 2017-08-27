@@ -9,7 +9,7 @@ public interface ExampleDataClass {
 
     int counter();
 
-    static ExampleDataClassBuilder builder() {
-        return new ExampleDataClassBuilder();
+    static ImmutableExampleDataClass.Builder builder() {
+        return ImmutableExampleDataClass.builder();
     }
 }
