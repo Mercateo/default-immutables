@@ -3,7 +3,7 @@
 
     <artifactId>default-immutables</artifactId>
     <groupId>com.mercateo</groupId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.2.0</version>
 
     <name>default-immutables</name>
     <description>Default styles for Immutables</description>
@@ -51,7 +51,7 @@
     <scm>
         <connection>scm:git:git@github.com:Mercateo/default-immutables.git</connection>
         <url>https://github.com/Mercateo/default-immutables.git</url>
-        <tag>HEAD</tag>
+        <tag>default-immutables-1.2.0</tag>
     </scm>
 
     <properties>
