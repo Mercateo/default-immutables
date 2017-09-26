@@ -9,8 +9,8 @@ public class TestExamples {
     @Test
     public void dataClassExample() {
         final ExampleDataClass dataClass = ExampleDataClass.builder()
-                .withName("foo")
-                .withCounter(123)
+                .name("foo")
+                .counter(123)
                 .build();
 
         assertThat(dataClass.getName()).isEqualTo("foo");
@@ -18,7 +18,7 @@ public class TestExamples {
 
         ExampleDataClass otherDataClass = ExampleDataClass.builder()
                 .from(dataClass)
-                .withName("bar")
+                .name("bar")
                 .build();
 
         assertThat(otherDataClass.getName()).isEqualTo("bar");

@@ -10,7 +10,6 @@ import org.immutables.vavr.encodings.VavrEncodingEnabled;
 
 @Target({ ElementType.PACKAGE, ElementType.TYPE })
 @Value.Style(
-        init = "with*",
         visibility = Value.Style.ImplementationVisibility.PUBLIC,
         builderVisibility = Value.Style.BuilderVisibility.SAME)
 @VavrEncodingEnabled

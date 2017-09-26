@@ -18,23 +18,23 @@ public interface ExampleDataClass {
 
     int counter();
 
-    static ExampleDataClassBuilder builder() {
-        return new ExampleDataClassBuilder();
+    static ImmutableExampleDataClass.Builder builder() {
+        return ImmutableExampleDataClass.builder();
     }
 }
 ```
 there is a builder
 ```
     ExampleDataClass dataClass = ExampleDataClass.builder()
-            .withName("foo")
-            .withCounter(123)
+            .name("foo")
+            .counter(123)
             .build();
 ```
 which even has a copy function:
 ```
     ExampleDataClass otherDataClass = ExampleDataClass.builder()
             .from(dataClass)
-            .withName("bar")
+            .name("bar")
             .build();
 ```
 
