@@ -10,7 +10,7 @@ Default-Styles and Helper-Classes for common use cases of [Immutables](http://im
 ## Data class style
 
 After defining an immutable with data class style
-```
+```java
 @Value.Immutable
 @DataClass
 public interface ExampleDataClass {
@@ -24,26 +24,57 @@ public interface ExampleDataClass {
 }
 ```
 there is a builder
-```
+```java
     ExampleDataClass dataClass = ExampleDataClass.builder()
             .name("foo")
             .counter(123)
             .build();
 ```
 which even has a copy function:
-```
+```java
     ExampleDataClass otherDataClass = ExampleDataClass.builder()
             .from(dataClass)
             .name("bar")
             .build();
 ```
 
+## Value style
+
+After defining an immutable with data class style
+```java
+@Value.Immutable
+@ValueStyle
+public interface _ExampleValue {
+    String getName();
+
+    int counter();
+}
+```
+there is a builder
+```java
+    ExampleValue value = ExampleValue.builder()
+            .name("foo")
+            .counter(123)
+            .build();
+```
+which has a copy function in the builder:
+```java
+    ExampleValue otherValue = ExampleValue.builder()
+            .from(value)
+            .name("bar")
+            .build();
+```
+or a `with` method
+```java
+    ExampleValue anotherValue = value.withName("baz");
+```
+
 ## Tuple style
 
 After defining an immutable with tuple style
-```
+```java
 @Value.Immutable
-@Tuple
+@TupleStyle
 public interface ExampleTuple {
     String name();
 
@@ -57,7 +88,7 @@ public interface ExampleTuple {
 
 there is a static constructor method
 
-```
+```java
     ExampleTuple tuple = ExampleTuple.of("foo", 123);
 ```
 
@@ -65,14 +96,14 @@ there is a static constructor method
 
 Typed "primitives" can be easily defined:
 
-```
+```java
 @Value.Immutable
 @Wrapped
 public abstract class _ExampleTypedString extends Wrapper<String> {}
 ```
 
 and used:
-```
+```java
     ExampleTypedString typedString = ExampleTypedString.of("foo");
 ```
 
