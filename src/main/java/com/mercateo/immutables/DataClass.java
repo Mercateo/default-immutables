@@ -8,10 +8,14 @@ import java.lang.annotation.Target;
 import org.immutables.value.Value;
 import org.immutables.vavr.encodings.VavrEncodingEnabled;
 
+/**
+ * @deprecated, please use {@link ValueStyle} instead
+ */
 @Target({ ElementType.PACKAGE, ElementType.TYPE })
 @Value.Style(
         visibility = Value.Style.ImplementationVisibility.PUBLIC,
         builderVisibility = Value.Style.BuilderVisibility.SAME)
 @VavrEncodingEnabled
+@Deprecated
 public @interface DataClass {
 }
